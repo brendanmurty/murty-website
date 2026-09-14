@@ -14,7 +14,8 @@ export function responseHandler(
   const headers = cors(request);
 
   if (responseCode === 404) {
-    env.postHogAnonBackendEvent(404, request);
+    // Report the 404 in the background so the redirect is not delayed.
+    env.postHogAnonBackendEvent(404, request).catch(() => {});
     return Response.redirect(new URL("/", siteUrl), 301);
   }
 
