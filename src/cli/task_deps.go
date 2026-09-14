@@ -7,5 +7,5 @@ func TaskDeps() {
 	LogInfo("Updating Go dependencies")
 	Cmd("cd src/cli && go get -u -t ./... && go mod tidy")
 
-	LogWarn("Dependency updates completed, check updated files")
+	LogWarn("Finished dependency updates, check updated files")
 }

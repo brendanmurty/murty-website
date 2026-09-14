@@ -1,5 +1,5 @@
 import { cmd, cmdShow } from "$be/cmd.ts";
-import { logInfo, logWarn } from "$be/log.ts";
+import { logInfo, logSuccess, logWarn } from "$be/log.ts";
 import { Env } from "$be/env.ts";
 
 const env = new Env();
@@ -72,4 +72,4 @@ logWarn("Deleting the build directory");
 
 cmd(`rm -rf "${buildDir}"`);
 
-logInfo("Build complete");
+logSuccess("Build complete");

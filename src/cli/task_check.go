@@ -3,6 +3,7 @@ package main
 func TaskCheck() {
 	LogInfo("Running Go tests")
 	Cmd("cd src/cli && go test -v")
+	LogInfo("Finished Go tests")
 
 	LogInfo("Installing Deno dependencies")
 	Cmd("deno task install")
@@ -21,4 +22,10 @@ func TaskCheck() {
 
 	LogInfo("Running Deno tests")
 	Cmd("deno task test")
+	LogInfo("Finished Deno tests")
+
+	LogWarn("Removing generated coverage files")
+	Cmd("rm -rf .coverage")
+
+	LogSuccess("Finished test process")
 }

@@ -1,6 +1,7 @@
 package main
 
 func TaskBuild() {
-	LogInfo("Starting the site build proccess")
+	LogInfo("Starting build proccess")
 	Cmd("deno task build")
+	LogSuccess("Finished build process")
 }
