@@ -94,7 +94,7 @@
     "infra:apply": {
       "description": "Apply local infra config changes to Railway infra.",
       "command": "railway config apply"
-    },
+    }
   },
   "compilerOptions": {
     "types": [
