@@ -1,6 +1,6 @@
 ## Infrastructure and Deployment
 
-Following the initial setup below, [Railway](https://railway.com/) triggers a deployment when a new commit is pushed to the `main` branch.
+Following the initial setup below, [Railway](https://railway.com/) will automatically trigger a new deployment when a commit is pushed to the `main` branch.
 
 ## Initial Setup
 
@@ -51,12 +51,11 @@ Edit the repository labels:
 
 #### Environment Variables
 
-Add each item below to the Service variables in the Railway dashboard. Railway
-matches the `SITE_*` names against the Dockerfile build arguments during the
-build, and injects every value into the container at runtime.
+In the Railway service, click the `Variables` tab, then add these items: 
 
 - Add new `Secret` item named `SITE_GITHUB_ID`, refer to the setup steps for this from the GitHub Actions section above
 - Add new `Secret` item named `SITE_POSTHOG_ID`, set to a value like `aaabbbccc`
+- Add new `Plain Text` item named `PORT`, set to `8000`
 - Add new `Plain Text` item named `SITE_POSTHOG_API_HOST`, set to a value like `https://eu.posthog.com`
 - Add new `Plain Text` item named `SITE_POSTHOG_UI_HOST`, set to a value like `https://eu.posthog.com`
 - Add new `Plain Text` item named `SITE_ENV`, set to `production`
