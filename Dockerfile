@@ -1,7 +1,5 @@
-# syntax=docker/dockerfile:1
-
 # This image intentionally supports linux/amd64 only.
-FROM denoland/deno:ubuntu@sha256:47adfd2067d9fe7821b02d18efff7b56dae63dbb9cb948bad015a478d639d137 AS build
+FROM denoland/deno:ubuntu AS build
 WORKDIR /app
 
 ARG TARGETARCH
@@ -44,14 +42,14 @@ RUN echo "Building site configuration ${SITE_CONFIG_HASH}" && \
 # registry during startup.
 RUN deno cache --frozen ./src/backend/server.ts
 
-FROM denoland/deno:ubuntu@sha256:47adfd2067d9fe7821b02d18efff7b56dae63dbb9cb948bad015a478d639d137 AS output
+FROM denoland/deno:ubuntu AS output
 WORKDIR /app
 
 ARG SITE_PUBLIC_DIR=public
 
 ENV SITE_PUBLIC_DIR=public
 
-# OCI image annotations must be set in the final stage to appear on the image.
+# Set Docker Image labels in the final stage so they are applied properly.
 LABEL maintainer="Brendan Murty"
 LABEL org.opencontainers.image.authors="Brendan Murty"
 LABEL org.opencontainers.image.source="https://github.com/bcm-works/site"
