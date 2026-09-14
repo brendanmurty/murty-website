@@ -1,4 +1,8 @@
 @media only screen and (max-width: 850px) {
+  header .site-link {
+    gap: 10px;
+  }
+
   .layout-container header {
     display: block;
   }
