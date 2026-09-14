@@ -8,6 +8,7 @@ This repository contains my website at [bcm.works](https://bcm.works/), related 
 
 - [.github](.github/) - GitHub config and [Actions](https://github.com/features/actions) workflows.
 - [.prototypes](.prototypes/) - Ideas and half-built prototypes.
+- [.railway](.railway/) - Infra as Code, refer to [docs/INFRA.md](docs/INFRA.md).
 - [.zed](.zed/) - Customised [Zed Editor](https://zed.dev/) project configuration.
 - [content](content/) - Website page content in [Markdown](https://daringfireball.net/projects/markdown/syntax) files.
 - [docs](docs/) - Documentation and contextual information.

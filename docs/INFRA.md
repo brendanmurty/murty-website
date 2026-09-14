@@ -38,7 +38,7 @@ Edit the repository labels:
 
 ### Railway
 
-#### Project Setup
+#### Initial Setup
 
 - Login to [Railway](https://railway.com/)
 - Create a new Project
@@ -74,3 +74,20 @@ In the Railway service, click the `Variables` tab, then add these items:
 
 Site metadata is embedded into the static pages at build time, so changing any
 `SITE_*` build value requires a redeploy.
+
+#### Infra as Code
+
+To use the Infra as Code setup in [.railway](../.railway/), first install the [Railway CLI](https://docs.railway.com/cli#installing-the-cli).
+
+Now login to the Railway CLI and link your project:
+
+```
+deno task infra:login
+```
+
+Other infra commands:
+
+- `deno task infra:pull` - Pull down Railway infra config.
+- `deno task infra:plan` - Check how local infra config changes affect Railway infra.
+- `deno task infra:apply` - Apply local infra config changes to Railway infra.
+

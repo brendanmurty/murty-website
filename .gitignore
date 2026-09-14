@@ -6,6 +6,8 @@ cache
 temp
 src/cli/temp/
 
+.railway/README.md
+
 build/
 public/
 dist/

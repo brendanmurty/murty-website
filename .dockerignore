@@ -3,6 +3,8 @@
 .github/
 .zed/
 
+.railway/
+
 design/
 docs/
 .prototypes/

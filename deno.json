@@ -23,7 +23,8 @@
     "is_json/": "https://deno.land/x/is_json@v1.0.2/",
     "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.3.1/",
     "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.15/jsx-runtime.ts",
-    "posthog": "npm:posthog-node@^5.52.1"
+    "posthog": "npm:posthog-node@^5.52.1",
+    "railway": "npm:railway@^3.11.0"
   },
   "tasks": {
     "setup": {
@@ -77,7 +78,23 @@
     "hooks:pre-push": {
       "description": "Git Hook - Pre push.",
       "command": "deno task test > .logs/git-pre-push.log"
-    }
+    },
+    "infra:login": {
+      "description": "Login to the Railway CLI and link your infra project.",
+      "command": "railway login && railway link"
+    },
+    "infra:pull": {
+      "description": "Pull down Railway infra config.",
+      "command": "railway config pull"
+    },
+    "infra:plan": {
+      "description": "Check how local infra config changes affect Railway infra.",
+      "command": "railway config plan"
+    },
+    "infra:apply": {
+      "description": "Apply local infra config changes to Railway infra.",
+      "command": "railway config apply"
+    },
   },
   "compilerOptions": {
     "types": [
