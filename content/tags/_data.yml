@@ -1,2 +1,2 @@
 type: tag
-layout: tag.njk
+layout: layouts/tag.tsx

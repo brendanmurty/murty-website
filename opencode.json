@@ -143,6 +143,7 @@
 			"eslint *": "allow",
 			"npx eslint": "allow",
 			"npx eslint *": "allow",
+			"deno task infra-*": "deny",
 			"git commit": "deny",
 			"git commit *": "deny",
 			"git push": "deny",

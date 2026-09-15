@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { createRoot } from "react-dom/client";
 
 interface GithubUser {
   status?: string;
@@ -14,7 +13,7 @@ interface GithubInfoProps {
   username: string;
 }
 
-function GithubInfo({ username }: GithubInfoProps) {
+export default function GithubInfo({ username }: GithubInfoProps) {
   const [user, setUser] = useState<GithubUser | null>(null);
   const [loaded, setLoaded] = useState(false);
 
@@ -87,10 +86,4 @@ function GithubInfo({ username }: GithubInfoProps) {
       </ul>
     </div>
   );
-}
-
-const container = document.getElementById("github-info-root");
-
-if (container) {
-  createRoot(container).render(<GithubInfo username={container.dataset.username ?? ""} />);
 }
