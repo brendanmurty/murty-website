@@ -29,8 +29,9 @@ Fetch information from the following websites to clarify suggested changes:
 
 - Deno documentation: https://docs.deno.com/
 - Deno Lume documentation: https://lume.land/docs/
-- GitHub public code: https://raw.githubusercontent.com/
-- GitHub documentation: https://docs.github.com/
 - Deno packages (JSR): https://jsr.io/
 - Node packages (NPM): https://www.npmjs.com/
+- React documentation: https://react.dev/reference/react
 - Go documentation: https://go.dev/doc/
+- GitHub public code: https://raw.githubusercontent.com/
+- GitHub documentation: https://docs.github.com/
