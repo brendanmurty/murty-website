@@ -44,6 +44,9 @@ const site = lume({
   location: new URL(siteUrl)
 });
 
+// The shared React component is bundled for the browser, not rendered by Lume.
+site.ignore("components/");
+
 // Save env vars as site data variables so templates can use them
 
 site.data("SITE_LOCAL", siteIsLocal);
@@ -150,7 +153,7 @@ site.use(readingInfo());
 site.use(jsx());
 site.add("app/main.tsx");
 site.use(esbuild({
-  denoConfig: "app/deno.json"
+  denoConfig: "src/frontend/app/deno.json"
 }));
 
 export default site;
