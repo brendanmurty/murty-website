@@ -20,6 +20,8 @@ cmd(`mkdir -p "${buildDir}/_includes/components"`);
 cmd(`cp -r "src/frontend/layouts/." "${buildDir}/_includes/layouts"`);
 cmd(`cp -r "src/frontend/components/." "${buildDir}/_includes/components"`);
 cmd(`cp -r "src/frontend/app" "${buildDir}/app"`);
+cmd(`mkdir -p "${buildDir}/components"`);
+cmd(`cp -r "src/frontend/components/." "${buildDir}/components"`);
 
 cmd(`rm -rf "${publicDir}"`);
 cmd(`mkdir -p "${publicDir}"`);

@@ -1,4 +1,18 @@
 {
+  "nodeModulesDir": "none",
+  "preferPackageJson": false,
+  "minimumDependencyAge": 14,
+  "lock": true,
+  "tasks": {
+    "install": {
+      "description": "Install Deno dependencies.",
+      "command": "deno install --quiet"
+    },
+    "update": {
+      "description": "Update Deno dependencies.",
+      "command": "deno outdated --update --compatible"
+    }
+  },
   "imports": {
     "react": "npm:react@19.3.0",
     "react/jsx-runtime": "npm:react@19.3.0/jsx-runtime",
