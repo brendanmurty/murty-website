@@ -24,7 +24,8 @@
     "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.3.1/",
     "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.15/jsx-runtime.ts",
     "posthog": "npm:posthog-node@^5.52.2",
-    "railway": "npm:railway@^3.11.0"
+    "railway": "npm:railway@^3.11.0",
+    "react": "npm:react@19.3.0"
   },
   "tasks": {
     "setup": {
@@ -37,11 +38,11 @@
     },
     "install": {
       "description": "Install Deno dependencies.",
-      "command": "deno install --quiet"
+      "command": "deno install --quiet && cd src/frontend/app && deno task install"
     },
     "update": {
       "description": "Update Deno dependencies.",
-      "command": "deno outdated --update --compatible"
+      "command": "deno outdated --update --compatible && cd src/frontend/app && deno task update"
     },
     "deps": {
       "description": "Update Deno and Go dependencies.",
@@ -69,7 +70,7 @@
     },
     "check": {
       "description": "Run Deno code checks.",
-      "command": "deno --quiet lint && deno --quiet fmt && deno --quiet check"
+      "command": "deno --quiet lint && deno --quiet fmt && deno --quiet check && deno --quiet check --config=src/frontend/app/deno.json src/frontend/app/main.tsx"
     },
     "hooks:install": {
       "description": "Git Hook - Initial setup.",
@@ -98,7 +99,8 @@
   },
   "compilerOptions": {
     "types": [
-      "lume/types.ts"
+      "lume/types.ts",
+      "npm:@types/react@19.3.0"
     ],
     "jsx": "react-jsx",
     "jsxImportSource": "lume",
@@ -158,6 +160,8 @@
     ".zed/",
     "build/",
     "public/",
-    "src/cli/"
+    "src/cli/",
+    "src/frontend/app/",
+    "src/frontend/components/github.tsx"
   ]
 }

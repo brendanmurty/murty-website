@@ -149,6 +149,7 @@ export function PageFrame({ data, children }: PageFrameProps) {
             </article>
           </main>
         </div>
+        <script type="module" src="/app/main.js"></script>
       </body>
     </html>
   );
