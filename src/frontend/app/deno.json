@@ -18,7 +18,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "types": [
-      "npm:@types/react@19.3.0"
+      "npm:@types/react@^19"
     ],
     "lib": [
       "dom",
