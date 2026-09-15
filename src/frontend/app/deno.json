@@ -4,6 +4,16 @@
     "react/jsx-runtime": "npm:react@19.3.0/jsx-runtime",
     "react-dom/client": "npm:react-dom@19.3.0/client"
   },
+  "tasks": {
+    "install": {
+      "description": "Install Deno dependencies.",
+      "command": "deno install --quiet"
+    },
+    "update": {
+      "description": "Update Deno dependencies.",
+      "command": "deno outdated --update --compatible"
+    }
+  },
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "react",

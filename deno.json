@@ -38,11 +38,11 @@
     },
     "install": {
       "description": "Install Deno dependencies.",
-      "command": "deno install --quiet && cd src/frontend/app && deno task install"
+      "command": "deno install --quiet && cd ./src/frontend/app && deno task install"
     },
     "update": {
       "description": "Update Deno dependencies.",
-      "command": "deno outdated --update --compatible && cd src/frontend/app && deno task update"
+      "command": "deno outdated --update --compatible && cd ./src/frontend/app && deno task update"
     },
     "deps": {
       "description": "Update Deno and Go dependencies.",
