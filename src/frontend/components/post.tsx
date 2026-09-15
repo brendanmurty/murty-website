@@ -13,7 +13,10 @@ export interface PostData {
 }
 
 export function PostItem({ post }: { post: PostData; key?: string }) {
-  const content = (post.content ?? "").replace(/<[^>]*>/g, "").trim();
+  // Strip out HTML and Markdown Link formatting
+  const content = (post.content ?? "").replace(/<[^>]*>/g, "").replace(/\[(.*?)\]\((.*?)\)/g, "$1").trim();
+
+  // Limit the length of the content to 140 characters
   const summary = content.length > 140 ? `${content.slice(0, 137)}...` : content;
 
   return (
