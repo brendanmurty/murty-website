@@ -12,13 +12,13 @@
 - Validate changes using the checks closest to real usage, and report what was verified.
 - Communicate the outcome first, followed by concise supporting detail.
 
-### Deno or TypeScript code (`*.ts`)
+### TypeScript files - `*.ts` and `*.tsx`
 
 - Always check Deno code changes using the custom `deno task check` command, which includes Deno lint, check and fmt.
 - Stick to standard Deno built-in features as much as possible, and if a third-party dependency is required, use the required JSR package(s) and add them to the `imports` list in `deno.json`.
 - If a Node package is required, add it to the `imports` list in `deno.json` with the value containing the standard `node:` prefix.
 
-### Go code (`*.go` and `go.mod`)
+### Go files - `*.go` and `go.mod`
 
 - Stick to the Go version specified in the relevant `go.mod` file
 - Test all code changes by adding the `GOCACHE=/tmp/gocache ` prefix to all `go test` commands
