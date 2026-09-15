@@ -1,5 +1,5 @@
 import { format } from "date-fns";
-import { PostLink, TagLink } from "./link.tsx";
+import { PostLink, TagLink } from "$fe/components/link.tsx";
 
 export interface PostData {
   url: string;

@@ -1,6 +1,6 @@
-import { PageFrame } from "./page.tsx";
-import { TagLink } from "../components/link.tsx";
-import type { PostData } from "../components/post.tsx";
+import { PageFrame } from "$fe/layouts/page.tsx";
+import { TagLink } from "$fe/components/link.tsx";
+import type { PostData } from "$fe/components/post.tsx";
 
 export default function Tags(data: Lume.Data) {
   const page = data as Lume.Data & { search: { pages: (...args: string[]) => unknown[] } };

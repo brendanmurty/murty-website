@@ -1,5 +1,5 @@
-import { PageFrame } from "./page.tsx";
-import { type PostData, PostHeading, PostInfo, PostTags } from "../components/post.tsx";
+import { PageFrame } from "$fe/layouts/page.tsx";
+import { type PostData, PostHeading, PostInfo, PostTags } from "$fe/components/post.tsx";
 
 export default function Post(data: Lume.Data) {
   const page = data as Lume.Data & PostData & { content: string };

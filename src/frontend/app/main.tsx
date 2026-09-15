@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import GithubInfo from "./github.tsx";
+import GithubInfo from "$fe/app/github.tsx";
 
 const container = document.getElementById("github-info-root");
 

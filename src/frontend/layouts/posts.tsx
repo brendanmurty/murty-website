@@ -1,5 +1,5 @@
-import { PageFrame } from "./page.tsx";
-import { type PostData, PostItem } from "../components/post.tsx";
+import { PageFrame } from "$fe/layouts/page.tsx";
+import { type PostData, PostItem } from "$fe/components/post.tsx";
 
 export default function Posts(data: Lume.Data) {
   const page = data as Lume.Data & { search: { pages: (...args: string[]) => unknown[] } };
