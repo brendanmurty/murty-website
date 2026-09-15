@@ -1,9 +1,11 @@
-import { type SitePageData } from "$fe/types.ts";
+import { SitePageData as SitePageDataBase } from "$fe/types.ts";
 
 interface PageFrameProps {
   data: SitePageData;
   children: unknown;
 }
+
+type SitePageData = Lume.Data & SitePageDataBase;
 
 const speculationRules = JSON.stringify({
   prefetch: [{

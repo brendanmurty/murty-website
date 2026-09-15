@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { type GithubUser } from "$fe/types.ts";
+import { type GithubUser } from "../types.ts";
 
 interface GithubInfoProps {
   username: string;

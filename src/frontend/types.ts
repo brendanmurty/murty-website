@@ -1,6 +1,6 @@
 // Frontend Types
 
-export type SitePageData = Lume.Data & {
+export interface SitePageData {
   title?: string;
   description?: string;
   theme?: string;
@@ -19,7 +19,7 @@ export type SitePageData = Lume.Data & {
   SITE_POSTHOG_ID?: string;
   SITE_POSTHOG_API_HOST?: string;
   SITE_POSTHOG_UI_HOST?: string;
-};
+}
 
 export type GithubUser = {
   status?: string;
