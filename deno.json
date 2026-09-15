@@ -37,11 +37,11 @@
     },
     "install": {
       "description": "Install Deno dependencies.",
-      "command": "deno install --quiet && cd src/frontend/app && deno task install"
+      "command": "deno install --quiet"
     },
     "update": {
       "description": "Update Deno dependencies.",
-      "command": "deno outdated --update --compatible && cd src/frontend/app && deno task update"
+      "command": "deno outdated --update --compatible"
     },
     "deps": {
       "description": "Update Deno and Go dependencies.",
@@ -69,7 +69,7 @@
     },
     "check": {
       "description": "Run Deno code checks.",
-      "command": "deno --quiet lint && deno --quiet fmt && deno --quiet check && deno --quiet check --config=src/frontend/app/deno.json src/frontend/app/main.tsx"
+      "command": "deno --quiet lint && deno --quiet fmt && deno --quiet check"
     },
     "hooks:install": {
       "description": "Git Hook - Initial setup.",
@@ -158,8 +158,6 @@
     ".zed/",
     "build/",
     "public/",
-    "src/cli/",
-    "src/frontend/app/",
-    "src/frontend/components/"
+    "src/cli/"
   ]
 }
