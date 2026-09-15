@@ -1,1 +1,1 @@
-export { default } from "$fe/components/github.tsx";
+export { default } from "../components/github.tsx";
