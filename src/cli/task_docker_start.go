@@ -32,6 +32,7 @@ func TaskDockerStart() {
 	TaskDockerStop()
 
 	port := strconv.Itoa(EnvGetPort())
+	url := EnvGet("SITE_URL", "http://localhost")
 
 	args := []string{
 		"run", "-d",
@@ -51,15 +52,14 @@ func TaskDockerStart() {
 			}
 		}
 	}
-
 	args = append(args, dockerImageName)
 
-	containerID, err := CmdOutput("docker", args...)
+	_, err := CmdOutput("docker", args...)
 
 	if err != nil {
 		LogError(fmt.Sprintf("Cmd Error: %s", err.Error()))
 		os.Exit(1)
 	}
 
-	LogSuccess("Docker container started: " + containerID)
+	LogSuccess(fmt.Sprintf("Docker container starting at %s:%s", url, port))
 }
