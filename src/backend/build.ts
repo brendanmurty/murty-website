@@ -65,7 +65,17 @@ cmd(`cp -r "src/frontend/styles/fonts" "${publicDir}/css/fonts"`);
 cmd(`cp -r "content/images" "${publicDir}/images"`);
 cmd(`cp "content/favicon.ico" "${publicDir}/favicon.ico"`);
 cmd(`cp "content/resume.pdf" "${publicDir}/resume.pdf"`);
-cmd(`cp -r "src/frontend/scripts" "${publicDir}/scripts"`);
+cmd(`mkdir -p "${publicDir}/scripts"`);
+cmdShow(
+  `deno --quiet bundle \
+  --frozen \
+  --packages=bundle \
+  --platform=browser \
+  --format=iife \
+  --minify \
+  "src/frontend/islands/github.tsx" \
+  --output="${publicDir}/scripts/github.js"`
+);
 cmd(`cp "src/frontend/manifest.json" "${publicDir}/manifest.json"`);
 
 logWarn("Deleting the build directory");

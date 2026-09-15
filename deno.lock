@@ -72,6 +72,7 @@
     "npm:@inquirer/prompts@^8.7.2": "8.7.2",
     "npm:@octokit/graphql@^9.0.5": "9.0.5",
     "npm:@types/nunjucks@3.2.6": "3.2.6",
+    "npm:@types/react@19.3.0": "19.3.0",
     "npm:chalk@6": "6.0.0",
     "npm:date-fns@4.3.0": "4.3.0",
     "npm:date-fns@4.4.0": "4.4.0",
@@ -91,6 +92,8 @@
     "npm:nunjucks@3.2.4": "3.2.4",
     "npm:posthog-node@^5.52.2": "5.52.2",
     "npm:railway@^3.11.0": "3.11.0",
+    "npm:react-dom@19.3.0": "19.3.0_react@19.3.0",
+    "npm:react@19.3.0": "19.3.0",
     "npm:remove-markdown@0.6.4": "0.6.4"
   },
   "jsr": {
@@ -784,6 +787,12 @@
     "@types/nunjucks@3.2.6": {
       "integrity": "sha512-pHiGtf83na1nCzliuAdq8GowYiXvH5l931xZ0YEHaLMNFgynpEqx+IPStlu7UaDkehfvl01e4x/9Tpwhy7Ue3w=="
     },
+    "@types/react@19.3.0": {
+      "integrity": "sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==",
+      "dependencies": [
+        "csstype"
+      ]
+    },
     "a-sync-waterfall@1.0.1": {
       "integrity": "sha512-RYTOHHdWipFUliRFMCS4X2Yn2X8M87V/OpSqWzKKOGhzqyUxzyVmhHDH9sAvG+ZuQf/TAOFsLCpMw09I1ufUnA=="
     },
@@ -810,6 +819,9 @@
     },
     "content-type@3.0.0": {
       "integrity": "sha512-AIi5H6p0xk5uknXcN3/rmhP8jgp69OfSe/JuKiQAFprJ7UGw7mwj7m4XcmDzlrnJDG+cGpphAINGdU3g3g7kDw=="
+    },
+    "csstype@3.2.3": {
+      "integrity": "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ=="
     },
     "date-fns@4.3.0": {
       "integrity": "sha512-OYcL+3N/jyWbYdFGqoMAhytDgxP9pbYPUUiRCOgn4Fewaadk9l/Wam4Avciiyp2BgkpfQyBV9B+ehnVJych+eQ=="
@@ -1020,11 +1032,24 @@
       ],
       "bin": true
     },
+    "react-dom@19.3.0_react@19.3.0": {
+      "integrity": "sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==",
+      "dependencies": [
+        "react",
+        "scheduler"
+      ]
+    },
+    "react@19.3.0": {
+      "integrity": "sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog=="
+    },
     "remove-markdown@0.6.4": {
       "integrity": "sha512-BompiLClzjfh46irZmzv+1Q61jZYlKN3iq/hzae9EOUwf7ctr/5wpD4qwgn/FWDAYE18RORO7z/yr+HXZJCY8Q=="
     },
     "safer-buffer@2.1.2": {
       "integrity": "sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg=="
+    },
+    "scheduler@0.28.0": {
+      "integrity": "sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw=="
     },
     "signal-exit@4.1.0": {
       "integrity": "sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw=="
@@ -1349,11 +1374,14 @@
       "jsr:@std/yaml@^1.2.0",
       "npm:@inquirer/prompts@^8.7.2",
       "npm:@octokit/graphql@^9.0.5",
+      "npm:@types/react@19.3.0",
       "npm:chalk@6",
       "npm:date-fns@^4.4.0",
       "npm:highlight.js@^11.12.0",
       "npm:posthog-node@^5.52.2",
-      "npm:railway@^3.11.0"
+      "npm:railway@^3.11.0",
+      "npm:react-dom@19.3.0",
+      "npm:react@19.3.0"
     ]
   }
 }
