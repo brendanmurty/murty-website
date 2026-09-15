@@ -20,6 +20,10 @@ export default function GithubInfo({ username }: GithubInfoProps) {
   useEffect(() => {
     let active = true;
 
+    // Send a request to the backend, which handles
+    // and hides the API key and filters the response
+    // data from the GitHub API.
+
     fetch("/api/github-user/")
       .then((response) => {
         if (!response.ok || !response.headers.get("content-type")?.includes("application/json")) {
@@ -69,6 +73,11 @@ export default function GithubInfo({ username }: GithubInfoProps) {
       value: user?.followers ? `${user.followers} Followers` : undefined
     }
   ];
+
+  // If the backend API response isn't successful, the frontend
+  // will fallback to showing only the static GitHub profile link.
+  // The changes in the CSS classes support this by lowering the
+  // layout shift and flash of new content or vertical compacting.
 
   return (
     <div id="github-info" className={loaded ? "height-auto" : "print-hidden"}>
