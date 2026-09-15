@@ -4,13 +4,14 @@ import { Env as bcmEnv } from "$be/env.ts";
 import lume from "lume/mod.ts";
 import date from "lume/plugins/date.ts";
 import feed from "lume/plugins/feed.ts";
-import nunjucks from "lume/plugins/nunjucks.ts";
 import robots from "lume/plugins/robots.ts";
 import redirects from "lume/plugins/redirects.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import readingInfo from "lume/plugins/reading_info.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
+import esbuild from "lume/plugins/esbuild.ts";
+import jsx from "lume/plugins/jsx.ts";
 import langJavaScript from "highlight/lib/languages/javascript";
 import langBash from "highlight/lib/languages/bash";
 import langPhp from "highlight/lib/languages/php";
@@ -43,6 +44,9 @@ const site = lume({
   location: new URL(siteUrl)
 });
 
+// The shared React component is bundled for the browser, not rendered by Lume.
+site.ignore("components/");
+
 // Save env vars as site data variables so templates can use them
 
 site.data("SITE_LOCAL", siteIsLocal);
@@ -60,7 +64,6 @@ site.data("SITE_BUILD_ID", siteBuildId);
 
 // Lume Plugins
 
-site.use(nunjucks());
 site.use(date());
 site.use(redirects());
 
@@ -147,5 +150,10 @@ site.use(sitemap());
 // --- Allow page word count and reading minutes data
 
 site.use(readingInfo());
+site.use(jsx());
+site.add("app/main.tsx");
+site.use(esbuild({
+  denoConfig: "src/frontend/app/deno.json"
+}));
 
 export default site;

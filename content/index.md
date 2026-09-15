@@ -1,4 +1,4 @@
 ---
-layout: home.njk
+layout: layouts/home.tsx
 body_class: page-home
 ---

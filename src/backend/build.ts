@@ -15,7 +15,13 @@ logWarn(`Clearing the build (./${buildDir}) and public (./${publicDir}) director
 cmd(`rm -rf "${buildDir}"`);
 cmd(`mkdir -p "${buildDir}"`);
 cmd(`mkdir -p "${buildDir}/_data"`);
-cmd(`cp -r "src/frontend/templates" "${buildDir}/_includes"`);
+cmd(`mkdir -p "${buildDir}/_includes/layouts"`);
+cmd(`mkdir -p "${buildDir}/_includes/components"`);
+cmd(`cp -r "src/frontend/layouts/." "${buildDir}/_includes/layouts"`);
+cmd(`cp -r "src/frontend/components/." "${buildDir}/_includes/components"`);
+cmd(`cp -r "src/frontend/app" "${buildDir}/app"`);
+cmd(`mkdir -p "${buildDir}/components"`);
+cmd(`cp -r "src/frontend/components/." "${buildDir}/components"`);
 
 cmd(`rm -rf "${publicDir}"`);
 cmd(`mkdir -p "${publicDir}"`);
@@ -65,7 +71,6 @@ cmd(`cp -r "src/frontend/styles/fonts" "${publicDir}/css/fonts"`);
 cmd(`cp -r "content/images" "${publicDir}/images"`);
 cmd(`cp "content/favicon.ico" "${publicDir}/favicon.ico"`);
 cmd(`cp "content/resume.pdf" "${publicDir}/resume.pdf"`);
-cmd(`cp -r "src/frontend/scripts" "${publicDir}/scripts"`);
 cmd(`cp "src/frontend/manifest.json" "${publicDir}/manifest.json"`);
 
 logWarn("Deleting the build directory");

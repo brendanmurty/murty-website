@@ -1,4 +1,4 @@
 ---
 title: Tags
-layout: tags.njk
+layout: layouts/tags.tsx
 ---
