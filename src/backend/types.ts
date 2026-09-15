@@ -1,3 +1,5 @@
+// Backend Types
+
 export interface RequestInfoResponse {
   url: URL;
   path: string;

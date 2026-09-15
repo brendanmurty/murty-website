@@ -1,13 +1,5 @@
 import { useEffect, useState } from "react";
-
-interface GithubUser {
-  status?: string;
-  repos?: number;
-  prs?: number;
-  starred?: number;
-  following?: number;
-  followers?: number;
-}
+import { type GithubUser } from "$fe/types.ts";
 
 interface GithubInfoProps {
   username: string;

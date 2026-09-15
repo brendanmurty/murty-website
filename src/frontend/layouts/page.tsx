@@ -1,23 +1,4 @@
-type SitePageData = Lume.Data & {
-  title?: string;
-  description?: string;
-  theme?: string;
-  body_class?: string;
-  date?: Date;
-  photo_thumb_url?: string;
-  photo_url?: string;
-  content?: unknown;
-  SITE_LANG?: string;
-  SITE_AUTHOR?: string;
-  SITE_URL?: string;
-  SITE_FEED_DESC?: string;
-  SITE_FEED_TITLE?: string;
-  SITE_BUILD_ID?: string;
-  SITE_ENV?: string;
-  SITE_POSTHOG_ID?: string;
-  SITE_POSTHOG_API_HOST?: string;
-  SITE_POSTHOG_UI_HOST?: string;
-};
+import { type SitePageData } from "$fe/types.ts";
 
 interface PageFrameProps {
   data: SitePageData;

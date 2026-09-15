@@ -18,7 +18,7 @@ This repository contains my website at [bcm.works](https://bcm.works/), related 
 - [docs/INFRA.md](docs/INFRA.md) - Infrastructure and deployment documentation.
 - [src/backend](src/backend/) - Backend [Deno](https://deno.land/) file server, API and utilities.
 - [src/cli](src/cli/) - CLI tool written in [Go](https://go.dev/).
-- [src/frontend](src/frontend/) - Frontend [Lume](https://lume.land/) templates and styles.
+- [src/frontend](src/frontend/) - Frontend templates, components and styles.
 - [src/frontend/styles/theme.css](src/frontend/styles/theme.css) - Frontend design colour scheme and theme setup.
 - [src/frontend/manifest.json](src/frontend/manifest.json) - Progressive Web App configuration.
 - [.editorconfig](.editorconfig) - Sets basic code style rules via [EditorConfig](https://editorconfig.org)
@@ -34,6 +34,7 @@ This repository contains my website at [bcm.works](https://bcm.works/), related 
 - [Go](https://go.dev/) - Tasks CLI.
 - [Deno](https://deno.land/) and [TypeScript](https://www.typescriptlang.org/) - Backend, Frontend, and Unit Tests.
 - [Lume](https://lume.land/) - Static site generator for Deno.
+- [React](https://react.dev/) - Used by Lume to provide the frontend templates and components.
 - [Fonts by Mass-Driver](https://mass-driver.com/) - I have purchased licenses for use here.
 - [Font Awesome free icon pack](https://fontawesome.com/) - Used for icons on various pages and layouts.
 - [Emblem](https://flathub.org/apps/details/org.gnome.design.Emblem) - Used to create the site logo and favicon images.
