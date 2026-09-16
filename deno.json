@@ -6,7 +6,6 @@
   "imports": {
     "$be/": "./app/backend/",
     "$fe/": "./app/frontend/",
-    "@hongminhee/deno-task-hooks": "jsr:@hongminhee/deno-task-hooks@^0.1.2",
     "@inquirer/prompts": "npm:@inquirer/prompts@^8.7.2",
     "@octokit/graphql": "npm:@octokit/graphql@^9.0.5",
     "@std/assert": "jsr:@std/assert@^1.0.19",
@@ -71,14 +70,6 @@
     "check": {
       "description": "Run Deno code checks.",
       "command": "deno --quiet lint && deno --quiet fmt && deno --quiet check && deno --quiet check --config=app/frontend/app/deno.json app/frontend/app/main.tsx"
-    },
-    "hooks:install": {
-      "description": "Git Hook - Initial setup.",
-      "command": "deno run --allow-read=deno.json,.git/hooks/ --allow-write=.git/hooks/ jsr:@hongminhee/deno-task-hooks"
-    },
-    "hooks:pre-push": {
-      "description": "Git Hook - Pre push.",
-      "command": "deno task test > .logs/git-pre-push.log"
     },
     "infra:login": {
       "description": "Login to the Railway CLI and link your infra project.",

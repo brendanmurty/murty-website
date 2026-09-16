@@ -10,9 +10,6 @@ func TaskSetup() {
 	LogInfo("Installing Deno dependencies")
 	Cmd("deno task install")
 
-	LogInfo("Setup Git Hooks")
-	Cmd("deno task hooks:install")
-
 	LogInfo("Installing Go dependencies")
 	Cmd("cd cli && go mod download")
 
