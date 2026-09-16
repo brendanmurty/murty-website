@@ -8,9 +8,9 @@ This repository contains my website at [bcm.works](https://bcm.works/), related 
 
 - [.github](.github/) - GitHub config and [Actions](https://github.com/features/actions) workflows.
 - [.prototypes](.prototypes/) - Ideas and half-built prototypes.
-- [.railway](.railway/) - Infra as Code, refer to [docs/INFRA.md](docs/INFRA.md).
 - [.zed](.zed/) - Customised [Zed Editor](https://zed.dev/) project configuration.
 - [app/backend](app/backend/) - Backend [Deno](https://deno.land/) file server, API and utilities.
+- [app/backend/infra.railway.ts](app/backend/infra.railway.ts) - Infra as Code, refer to [docs/INFRA.md](docs/INFRA.md).
 - [app/frontend](app/frontend/) - Frontend templates, components and styles.
 - [app/frontend/styles/theme.css](app/frontend/styles/theme.css) - Frontend design colour scheme and theme setup.
 - [app/frontend/manifest.json](app/frontend/manifest.json) - Progressive Web App configuration.

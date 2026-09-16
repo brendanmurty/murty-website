@@ -86,15 +86,15 @@
     },
     "infra:pull": {
       "description": "Pull down Railway infra config.",
-      "command": "railway config pull"
+      "command": "railway config pull --force && mv .railway/railway.ts app/backend/infra.railway.ts"
     },
     "infra:plan": {
       "description": "Check how local infra config changes affect Railway infra.",
-      "command": "railway config plan"
+      "command": "railway config plan --file app/backend/infra.railway.ts"
     },
     "infra:apply": {
       "description": "Apply local infra config changes to Railway infra.",
-      "command": "railway config apply"
+      "command": "railway config apply --file app/backend/infra.railway.ts"
     }
   },
   "compilerOptions": {
@@ -161,6 +161,7 @@
     "build/",
     "public/",
     "cli/",
+    "app/backend/infra.railway.ts",
     "app/frontend/app/",
     "app/frontend/components/github.tsx"
   ]
