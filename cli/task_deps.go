@@ -5,7 +5,7 @@ func TaskDeps() {
 	Cmd("deno task update")
 
 	LogInfo("Updating Go dependencies")
-	Cmd("cd src/cli && go get -u -t ./... && go mod tidy")
+	Cmd("cd cli && go get -u -t ./... && go mod tidy")
 
 	LogWarn("Finished dependency updates, check updated files")
 }

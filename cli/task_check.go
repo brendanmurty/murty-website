@@ -2,7 +2,7 @@ package main
 
 func TaskCheck() {
 	LogInfo("Running Go tests")
-	Cmd("cd src/cli && go test -v")
+	Cmd("cd cli && go test -v")
 	LogInfo("Finished Go tests")
 
 	LogInfo("Installing Deno dependencies")
@@ -12,10 +12,10 @@ func TaskCheck() {
 	Cmd("deno task check")
 
 	LogInfo("Installing Go dependencies")
-	Cmd("cd src/cli && go get -u -t ./...")
+	Cmd("cd cli && go get -u -t ./...")
 
 	LogInfo("Checking Go dependencies")
-	Cmd("cd src/cli && go mod tidy")
+	Cmd("cd cli && go mod tidy")
 
 	LogInfo("Building the site")
 	TaskBuild()

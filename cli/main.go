@@ -97,7 +97,7 @@ func ShowHelp() {
 	Log(" ")
 
 	LogInfo("Build the 'task' binary using Go Build.")
-	Log("bash ./src/cli/build.sh")
+	Log("bash ./cli/build.sh")
 	Log(" ")
 
 	LogInfo("Show this help message.")

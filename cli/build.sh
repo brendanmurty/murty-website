@@ -5,9 +5,8 @@
 #
 #
 
-DIR="$(cd "$(dirname "$0")" && pwd)"
-REPO="$(cd "$(dirname "$0")/../.." && pwd)"
-
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+DIR="$REPO/cli"
 ENV="$REPO/.env"
 
 if [ ! -f "$ENV" ]; then

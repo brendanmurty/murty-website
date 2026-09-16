@@ -47,7 +47,7 @@ updates:
       prefix: "fix-deps-deno-"
       branch-name-case: "lowercase"
   - package-ecosystem: "gomod"
-    directory: "/src/cli"
+    directory: "/cli"
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 1

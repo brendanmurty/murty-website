@@ -14,7 +14,7 @@ func TaskSetup() {
 	Cmd("deno task hooks:install")
 
 	LogInfo("Installing Go dependencies")
-	Cmd("cd src/cli && go mod download")
+	Cmd("cd cli && go mod download")
 
 	LogSuccess("Setup completed")
 }

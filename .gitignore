@@ -4,7 +4,7 @@ node_modules
 **/node_modules
 cache
 temp
-src/cli/temp/
+cli/temp/
 
 .railway/README.md
 

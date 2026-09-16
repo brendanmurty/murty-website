@@ -11,13 +11,13 @@ This repository contains my website at [bcm.works](https://bcm.works/), related 
 - [.railway](.railway/) - Infra as Code, refer to [docs/INFRA.md](docs/INFRA.md).
 - [.zed](.zed/) - Customised [Zed Editor](https://zed.dev/) project configuration.
 - [content](content/) - Website page content in [Markdown](https://daringfireball.net/projects/markdown/syntax) files.
+- [cli](cli/) - Project helper tool written in [Go](https://go.dev/).
 - [docs](docs/) - Documentation and contextual information.
 - [docs/adrs](docs/adrs/) - Architecture decision records in [Markdown](https://daringfireball.net/projects/markdown/syntax) files.
 - [docs/AI-USE.md](docs/AI-USE.md) - Policy for use of AI Code Generation tools.
 - [docs/DESIGN.md](docs/DESIGN.md) - Frontend website design and CSS theming rules.
 - [docs/INFRA.md](docs/INFRA.md) - Infrastructure and deployment documentation.
 - [src/backend](src/backend/) - Backend [Deno](https://deno.land/) file server, API and utilities.
-- [src/cli](src/cli/) - CLI tool written in [Go](https://go.dev/).
 - [src/frontend](src/frontend/) - Frontend templates, components and styles.
 - [src/frontend/styles/theme.css](src/frontend/styles/theme.css) - Frontend design colour scheme and theme setup.
 - [src/frontend/manifest.json](src/frontend/manifest.json) - Progressive Web App configuration.
@@ -51,7 +51,7 @@ This repository contains my website at [bcm.works](https://bcm.works/), related 
 
 ## Commands
 
-A `task` binary is included to make it easier to run local dev tasks. The source code for this is in [src/cli](src/cli/).
+A `task` binary is included to make it easier to run local dev tasks. The source code for this is in [cli](cli/).
 
 Run the `setup` task to setup your local environment:
 
