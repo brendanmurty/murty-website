@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 #
 #
-# Task CLI - Rebuild the binary at "../../task"
+# Rebuild the CLI binary
+#   - Rebuilds the binary at "../task"
+#   - Can also be run from the repo root: deno task cli:build
 #
 #
 

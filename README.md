@@ -51,7 +51,7 @@ This repository contains my website at [bcm.works](https://bcm.works/), related 
 
 ## Commands
 
-A `task` binary is included to make it easier to run local dev tasks. The source code for this is in [cli](cli/).
+A `task` binary is included to make it easier to run local dev tasks. The source code for this is in [cli](cli/). To rebuild the `task` binary, run `deno task cli:build`.
 
 Run the `setup` task to setup your local environment:
 

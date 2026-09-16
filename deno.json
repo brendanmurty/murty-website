@@ -64,7 +64,7 @@
       "description": "Run the Lume site build process.",
       "command": "TZ=Australia/Sydney LUME_LOGS=error deno run --allow-all lume/cli.ts --config=app/frontend/lume.config.ts"
     },
-    "build-cli": {
+    "cli:build": {
       "description": "Run the CLI build process.",
       "command": "bash ./cli/build.sh"
     },
