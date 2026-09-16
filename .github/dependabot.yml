@@ -1,5 +1,7 @@
 version: 2
+
 updates:
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -19,8 +21,11 @@ updates:
       separator: "-"
       prefix: "fix-deps-ghactions-"
       branch-name-case: "lowercase"
+
   - package-ecosystem: "deno"
-    directory: "/"
+    directories:
+      - "/"
+      - "/app/frontend/app"
     exclude-paths:
       - ".prototypes/**"
     schedule:
@@ -46,6 +51,7 @@ updates:
       separator: "-"
       prefix: "fix-deps-deno-"
       branch-name-case: "lowercase"
+
   - package-ecosystem: "gomod"
     directory: "/cli"
     schedule:

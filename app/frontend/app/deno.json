@@ -1,8 +1,8 @@
 {
   "imports": {
-    "react": "npm:react@^19",
-    "react/jsx-runtime": "npm:react@^19/jsx-runtime",
-    "react-dom/client": "npm:react-dom@^19/client"
+    "react": "npm:react@^19.3.0",
+    "react/jsx-runtime": "npm:react@^19.3.0/jsx-runtime",
+    "react-dom/client": "npm:react-dom@^19.3.0/client"
   },
   "tasks": {
     "install": {
