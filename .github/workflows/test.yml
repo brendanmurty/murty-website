@@ -17,7 +17,7 @@ on:
       - main
     paths:
       - .github/**
-      - src/**
+      - app/**
       - deno.json
       - deno.lock
 

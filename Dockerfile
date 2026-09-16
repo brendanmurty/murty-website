@@ -40,7 +40,7 @@ RUN echo "Building site configuration ${SITE_CONFIG_HASH}" && \
 # Resolve the complete server dependency graph while network access is
 # available. Runtime uses --cached-only and therefore never contacts a package
 # registry during startup.
-RUN deno cache --frozen ./src/backend/server.ts
+RUN deno cache --frozen ./app/backend/server.ts
 
 FROM denoland/deno:ubuntu AS output
 WORKDIR /app
@@ -57,7 +57,7 @@ LABEL org.opencontainers.image.url="https://github.com/bcm-works/site"
 LABEL org.opencontainers.image.description="Website at bcm.works, related assets, tooling and documentation."
 LABEL org.opencontainers.image.licenses="MIT"
 
-COPY --from=build --chown=deno:deno /app/src/backend /app/src/backend
+COPY --from=build --chown=deno:deno /app/app/backend /app/app/backend
 COPY --from=build --chown=deno:deno /app/${SITE_PUBLIC_DIR} /app/public
 COPY --from=build --chown=deno:deno /app/deno.json /app/deno.json
 COPY --from=build --chown=deno:deno /app/deno.lock /app/deno.lock

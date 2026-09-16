@@ -153,7 +153,7 @@ site.use(readingInfo());
 site.use(jsx());
 site.add("app/main.tsx");
 site.use(esbuild({
-  denoConfig: "src/frontend/app/deno.json"
+  denoConfig: "app/frontend/app/deno.json"
 }));
 
 export default site;

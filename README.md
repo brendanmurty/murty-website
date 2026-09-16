@@ -10,6 +10,10 @@ This repository contains my website at [bcm.works](https://bcm.works/), related 
 - [.prototypes](.prototypes/) - Ideas and half-built prototypes.
 - [.railway](.railway/) - Infra as Code, refer to [docs/INFRA.md](docs/INFRA.md).
 - [.zed](.zed/) - Customised [Zed Editor](https://zed.dev/) project configuration.
+- [app/backend](app/backend/) - Backend [Deno](https://deno.land/) file server, API and utilities.
+- [app/frontend](app/frontend/) - Frontend templates, components and styles.
+- [app/frontend/styles/theme.css](app/frontend/styles/theme.css) - Frontend design colour scheme and theme setup.
+- [app/frontend/manifest.json](app/frontend/manifest.json) - Progressive Web App configuration.
 - [content](content/) - Website page content in [Markdown](https://daringfireball.net/projects/markdown/syntax) files.
 - [cli](cli/) - Project helper tool written in [Go](https://go.dev/).
 - [docs](docs/) - Documentation and contextual information.
@@ -17,10 +21,6 @@ This repository contains my website at [bcm.works](https://bcm.works/), related 
 - [docs/AI-USE.md](docs/AI-USE.md) - Policy for use of AI Code Generation tools.
 - [docs/DESIGN.md](docs/DESIGN.md) - Frontend website design and CSS theming rules.
 - [docs/INFRA.md](docs/INFRA.md) - Infrastructure and deployment documentation.
-- [src/backend](src/backend/) - Backend [Deno](https://deno.land/) file server, API and utilities.
-- [src/frontend](src/frontend/) - Frontend templates, components and styles.
-- [src/frontend/styles/theme.css](src/frontend/styles/theme.css) - Frontend design colour scheme and theme setup.
-- [src/frontend/manifest.json](src/frontend/manifest.json) - Progressive Web App configuration.
 - [.editorconfig](.editorconfig) - Sets basic code style rules via [EditorConfig](https://editorconfig.org)
 - [Dockerfile](Dockerfile) - Production [Docker](https://www.docker.com/) container build for the static site and backend API.
 - [deno.json](deno.json) - [Deno](https://deno.land/) imports, tasks and configuration.

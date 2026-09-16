@@ -47,7 +47,7 @@ Edit the repository labels:
 - Confirm the Service builds a `linux/amd64` image
 - Set the Service healthcheck path to `/api/health/`
 - Add each custom domain to the Service and update DNS as directed
-- Update `allowedOrigins` in [src/backend/headers.ts](../src/backend/headers.ts) if the domain list changes
+- Update `allowedOrigins` in [app/backend/headers.ts](../app/backend/headers.ts) if the domain list changes
 
 #### Environment Variables
 

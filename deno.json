@@ -4,8 +4,8 @@
   "minimumDependencyAge": 14,
   "lock": true,
   "imports": {
-    "$be/": "./src/backend/",
-    "$fe/": "./src/frontend/",
+    "$be/": "./app/backend/",
+    "$fe/": "./app/frontend/",
     "@hongminhee/deno-task-hooks": "jsr:@hongminhee/deno-task-hooks@^0.1.2",
     "@inquirer/prompts": "npm:@inquirer/prompts@^8",
     "@octokit/graphql": "npm:@octokit/graphql@^9",
@@ -34,15 +34,15 @@
     },
     "build": {
       "description": "Run the site build process.",
-      "command": "deno run --allow-all ./src/backend/build.ts"
+      "command": "deno run --allow-all ./app/backend/build.ts"
     },
     "install": {
       "description": "Install Deno dependencies.",
-      "command": "deno install --quiet && cd ./src/frontend/app && deno task install"
+      "command": "deno install --quiet && cd ./app/frontend/app && deno task install"
     },
     "update": {
       "description": "Update Deno dependencies.",
-      "command": "deno outdated --update --compatible && cd ./src/frontend/app && deno task update"
+      "command": "deno outdated --update --compatible && cd ./app/frontend/app && deno task update"
     },
     "deps": {
       "description": "Update Deno and Go dependencies.",
@@ -54,7 +54,7 @@
     },
     "serve": {
       "description": "Start the web server.",
-      "command": "deno serve --allow-read --allow-env --allow-net ./src/backend/server.ts"
+      "command": "deno serve --allow-read --allow-env --allow-net ./app/backend/server.ts"
     },
     "test": {
       "description": "Run the Deno test suite.",
@@ -62,7 +62,7 @@
     },
     "lume": {
       "description": "Run the Lume site build process.",
-      "command": "TZ=Australia/Sydney LUME_LOGS=error deno run --allow-all lume/cli.ts --config=src/frontend/lume.config.ts"
+      "command": "TZ=Australia/Sydney LUME_LOGS=error deno run --allow-all lume/cli.ts --config=app/frontend/lume.config.ts"
     },
     "build-cli": {
       "description": "Run the CLI build process.",
@@ -70,7 +70,7 @@
     },
     "check": {
       "description": "Run Deno code checks.",
-      "command": "deno --quiet lint && deno --quiet fmt && deno --quiet check && deno --quiet check --config=src/frontend/app/deno.json src/frontend/app/main.tsx"
+      "command": "deno --quiet lint && deno --quiet fmt && deno --quiet check && deno --quiet check --config=app/frontend/app/deno.json app/frontend/app/main.tsx"
     },
     "hooks:install": {
       "description": "Git Hook - Initial setup.",
@@ -114,8 +114,8 @@
   },
   "fmt": {
     "include": [
-      "src/backend/",
-      "src/frontend/",
+      "app/backend/",
+      "app/frontend/",
       "deno.json"
     ],
     "lineWidth": 120,
@@ -130,8 +130,8 @@
   },
   "lint": {
     "include": [
-      "src/backend/",
-      "src/frontend/",
+      "app/backend/",
+      "app/frontend/",
       "deno.json"
     ],
     "plugins": [
@@ -161,7 +161,7 @@
     "build/",
     "public/",
     "cli/",
-    "src/frontend/app/",
-    "src/frontend/components/github.tsx"
+    "app/frontend/app/",
+    "app/frontend/components/github.tsx"
   ]
 }

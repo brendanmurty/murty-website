@@ -6,7 +6,7 @@ const env = new Env();
 
 const buildDir: string = env.getBuildDir();
 const publicDir: string = env.getPublicDir();
-const cssDir: string = "src/frontend/styles";
+const cssDir: string = "app/frontend/styles";
 const timezone: string = env.get("SITE_TIMEZONE", "Australia/Sydney");
 const url: string = env.getUrl();
 
@@ -17,11 +17,11 @@ cmd(`mkdir -p "${buildDir}"`);
 cmd(`mkdir -p "${buildDir}/_data"`);
 cmd(`mkdir -p "${buildDir}/_includes/layouts"`);
 cmd(`mkdir -p "${buildDir}/_includes/components"`);
-cmd(`cp -r "src/frontend/layouts/." "${buildDir}/_includes/layouts"`);
-cmd(`cp -r "src/frontend/components/." "${buildDir}/_includes/components"`);
-cmd(`cp -r "src/frontend/app" "${buildDir}/app"`);
+cmd(`cp -r "app/frontend/layouts/." "${buildDir}/_includes/layouts"`);
+cmd(`cp -r "app/frontend/components/." "${buildDir}/_includes/components"`);
+cmd(`cp -r "app/frontend/app" "${buildDir}/app"`);
 cmd(`mkdir -p "${buildDir}/components"`);
-cmd(`cp -r "src/frontend/components/." "${buildDir}/components"`);
+cmd(`cp -r "app/frontend/components/." "${buildDir}/components"`);
 
 cmd(`rm -rf "${publicDir}"`);
 cmd(`mkdir -p "${publicDir}"`);
@@ -67,11 +67,11 @@ cmdShow(
 
 logInfo("Copying static files to the public directory");
 
-cmd(`cp -r "src/frontend/styles/fonts" "${publicDir}/css/fonts"`);
+cmd(`cp -r "app/frontend/styles/fonts" "${publicDir}/css/fonts"`);
 cmd(`cp -r "content/images" "${publicDir}/images"`);
 cmd(`cp "content/favicon.ico" "${publicDir}/favicon.ico"`);
 cmd(`cp "content/resume.pdf" "${publicDir}/resume.pdf"`);
-cmd(`cp "src/frontend/manifest.json" "${publicDir}/manifest.json"`);
+cmd(`cp "app/frontend/manifest.json" "${publicDir}/manifest.json"`);
 
 logWarn("Deleting the build directory");
 
