@@ -6,7 +6,7 @@ cache
 temp
 cli/temp/
 
-.railway/README.md
+.railway/
 
 build/
 public/
