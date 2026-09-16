@@ -2,6 +2,8 @@
 
 This repository contains my website at [bcm.works](https://bcm.works/), related assets, tooling and documentation.
 
+Note that I use this repository to learn new skills and to demonstrate my knowledge, and that it is over-engineered compared to the technical requirements of a similar real-world project.
+
 [![Uptime](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbcm-works%2Fstatus%2Fmain%2Fapi%2Fbcm-works%2Fuptime.json&style=flat-square&logo=upptime&label=Website%20Uptime&labelColor=444444)](https://github.com/bcm-works/status)
 
 ## Structure
