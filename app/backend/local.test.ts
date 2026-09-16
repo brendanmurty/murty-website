@@ -19,14 +19,14 @@ Deno.test("COMMON local", async (test) => {
   await test.step({
     name: "fileExists returns false for a directory path",
     fn: () => {
-      assertEquals(fileExists("src"), false);
+      assertEquals(fileExists("app"), false);
     }
   });
 
   await test.step({
     name: "dirExists returns true for a known directory",
     fn: () => {
-      assertEquals(dirExists("src"), true);
+      assertEquals(dirExists("app"), true);
     }
   });
 

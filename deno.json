@@ -58,7 +58,7 @@
     },
     "test": {
       "description": "Run the Deno test suite.",
-      "command": "deno test --allow-all --clean --coverage=.coverage --coverage-threshold=85 src"
+      "command": "deno test --allow-all --clean --coverage=.coverage --coverage-threshold=85 app"
     },
     "lume": {
       "description": "Run the Lume site build process.",
